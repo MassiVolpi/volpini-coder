@@ -1,0 +1,11 @@
+%display_and_center {
+    display: flex;
+    justify-content: center;
+}
+
+%ayuda{
+    text-align: center;
+    font-size: 30px;
+    text-decoration: bold;
+    color: nth($colores, 2);
+}

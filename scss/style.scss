@@ -1,0 +1,301 @@
+@import 'listas';
+@import 'footer';
+@import 'extends';
+@import 'mixins';
+
+@font-face {
+    font-family: 'Bebas Neue', cursive;
+    src: url('CSS/Fuentes/BebasNeue-Regular.ttf') format('woff');
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.opcion {
+    @include colores(nth($colores,1), nth($colores,3));
+    padding: 10px 10px;
+    width: 400px;
+    border: solid nth($colores,3) 2px ;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+    transition: all 200ms;
+
+    &:hover{
+        @include colores(nth($colores,3), nth($colores,1));
+        padding: 10px 10px;
+        width: 400px;
+        border: solid nth($colores,1) 2px;
+        border-radius: 0px;
+        text-decoration: none;
+    }
+}
+
+.imagen-borde {
+    border: solid nth($colores,1) 2px;  
+    transition: all 200ms;
+
+    &:hover{
+        transform: scale(0.75);
+    } 
+}
+
+
+#contenedor-universal {
+    @extend %display_and_center;
+
+    #container-padre{
+        width: 660px;
+        @extend %display_and_center;
+        flex-wrap: wrap;
+
+        #contiene-imagenes {
+            grid-template-rows: 205px;
+            grid-template-columns: 220px 220px 220px;
+            display: grid;
+            justify-content:baseline;
+            gap: 20px;
+        }
+        
+        #contiene-imagenes-dos {
+            display: grid;
+            grid-template-rows: 205px;
+            grid-template-columns: 220px 220px;
+            justify-self: center;
+            gap: 20px;
+
+    }
+    }
+}
+
+body{
+    header{
+        div{
+            div{
+                a {
+                    color: nth($colores,1);
+                    font-family: 'Bebas Neue';
+                }
+            h2{
+                padding: 0 30% 0 0;
+                font-family: 'Bebas Neue';
+                font-size: 60px;
+                margin: 0 0;
+                }
+            }
+        }
+    }
+}
+
+.carousel-caption {
+    @include colores(none, #00000088);
+    display: block;
+}
+
+video {
+    margin: 0 0 0 0;
+    height: auto;
+    width: 800px;
+}
+
+.imagenes {
+    width: 800px;
+    @extend %display_and_center;
+    flex-wrap: wrap;
+}
+
+#contiene-contacto {
+    @include colores(nth($colores,3), nth($colores,2));
+    @media screen and (max-width: 480px){
+        background-color: nth($colores,2);
+        color: nth($colores,3);
+    }
+    @media screen and (max-width: 720px){
+        background-color: nth($colores,3);
+        color: nth($colores,2);
+    }
+}
+
+#contacto {
+    text-align: center;
+}
+
+#mail {
+    text-align: center;
+}
+
+#info-extra {
+    color: nth($colores,2);
+}
+
+.menu-container {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    justify-content: start;
+    background-color: nth($colores,2);
+    top: 0%;
+    .menu{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: nth($colores,3);
+    }
+
+}
+
+#palabra-definida{
+    @media screen and (max-width: 480px){
+        @include colores(nth($colores,2), nth($colores,3));
+        font-family: 'Bebas Neue';
+        position: relative;
+        text-align: center;
+        width: auto;
+    }
+    @media screen and (max-width: 720px){
+        @include colores(nth($colores,3), nth($colores,2));
+        font-family: 'Bebas Neue';
+        position: relative;
+        text-align: center;
+        width: auto;
+    }
+}
+
+#container-uno{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #container-dos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .full-video{
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  #video-arriba{
+    margin-bottom: 200px;
+    width: 100%;
+    height: auto;
+  }
+
+.elipse{
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    z-index: 5;
+    margin: -50px auto;
+    width: 50px; 
+    height: 125px;
+    border-radius: 50%;
+    background: #2b2b2b;
+    -moz-transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0,0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+       height: 10px;
+       color: nth($colores, 3); 
+    }
+    &:checked{
+        position: fixed;
+        bottom: 20px;
+        right: 5px;
+        z-index: 10px;
+        margin: -80px auto;
+        width: 50px; 
+        height: 125px;
+        border-radius: 50%;
+        background: rgb(206, 206, 206);
+        -moz-transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+        box-shadow: 0px 1px 2px rgba(0, 0, 0,0.25);
+    }
+}
+
+.contiene-adver{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advertencia{
+    height: 200px;
+    width: 400px;
+    background-color: red;
+    color: nth($colores, 3);
+    border-radius: 30px 30px 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-size: 20px;
+        text-decoration: bold;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+.email{
+    margin-top: 50px;
+    p{
+        @extend %ayuda;
+    }
+}
+
+.numero{
+    p{
+        @extend %ayuda;
+    }
+}
+
+.redes{
+    p{
+        @extend %ayuda
+    }
+}
+
+.dato{
+    transition: all 500ms;
+    background-color: #fff;
+    color: nth($colores , 2);
+    &:hover{
+        background-color: nth($colores, 1);
+        color: nth($colores , 3);
+    }
+}
+
+.red{
+    width: 200px;
+    height: 200px;
+    background-color: none;
+    border-radius: none;
+    filter:none;
+    transition: all 500ms;
+    &:hover{
+        background-color: nth($colores, 3);
+        filter: invert(100%);
+        border-radius: 20px;
+    }
+}

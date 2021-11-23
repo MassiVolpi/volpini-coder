@@ -1,0 +1,17 @@
+@import 'listas';
+
+$standar: (
+    color-principal: nth($colores, 2),
+
+    color-dark: nth($colores, 1),
+
+    color-light: nth($colores, 3),
+);
+
+$night: (
+    color-principal: nth($colores-oscuros, 2),
+    
+    color-dark: nth($colores-oscuros, 1),
+
+    color-light: nth($colores-oscuros, 3),
+);

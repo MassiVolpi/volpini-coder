@@ -1,0 +1,305 @@
+footer {
+  transition: all 200ms;
+}
+footer:hover {
+  background-color: #2b2b2b;
+  color: whitesmoke;
+  justify-content: center;
+}
+@media screen and (max-width: 480px) {
+  footer {
+    background-color: whitesmoke;
+    color: #2b2b2b;
+  }
+}
+@media screen and (max-width: 720px) {
+  footer {
+    background-color: #2b2b2b;
+    color: whitesmoke;
+  }
+}
+
+.imagenes, #contenedor-universal #container-padre, #contenedor-universal {
+  display: flex;
+  justify-content: center;
+}
+
+.redes p, .numero p, .email p {
+  text-align: center;
+  font-size: 30px;
+  text-decoration: bold;
+  color: #5a0413;
+}
+
+@font-face {
+  font-family: "Bebas Neue", cursive;
+  src: url("CSS/Fuentes/BebasNeue-Regular.ttf") format("woff");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.opcion {
+  color: #2b2b2b;
+  background-color: whitesmoke;
+  padding: 10px 10px;
+  width: 400px;
+  border: solid whitesmoke 2px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: "Bebas Neue";
+  transition: all 200ms;
+}
+.opcion:hover {
+  color: whitesmoke;
+  background-color: #2b2b2b;
+  padding: 10px 10px;
+  width: 400px;
+  border: solid #2b2b2b 2px;
+  border-radius: 0px;
+  text-decoration: none;
+}
+
+.imagen-borde {
+  border: solid #2b2b2b 2px;
+  transition: all 200ms;
+}
+.imagen-borde:hover {
+  transform: scale(0.75);
+}
+
+#contenedor-universal #container-padre {
+  width: 660px;
+  flex-wrap: wrap;
+}
+#contenedor-universal #container-padre #contiene-imagenes {
+  grid-template-rows: 205px;
+  grid-template-columns: 220px 220px 220px;
+  display: grid;
+  justify-content: baseline;
+  gap: 20px;
+}
+#contenedor-universal #container-padre #contiene-imagenes-dos {
+  display: grid;
+  grid-template-rows: 205px;
+  grid-template-columns: 220px 220px;
+  justify-self: center;
+  gap: 20px;
+}
+
+body header div div a {
+  color: #2b2b2b;
+  font-family: "Bebas Neue";
+}
+body header div div h2 {
+  padding: 0 30% 0 0;
+  font-family: "Bebas Neue";
+  font-size: 60px;
+  margin: 0 0;
+}
+
+.carousel-caption {
+  color: none;
+  background-color: #00000088;
+  display: block;
+}
+
+video {
+  margin: 0 0 0 0;
+  height: auto;
+  width: 800px;
+}
+
+.imagenes {
+  width: 800px;
+  flex-wrap: wrap;
+}
+
+#contiene-contacto {
+  color: whitesmoke;
+  background-color: #5a0413;
+}
+@media screen and (max-width: 480px) {
+  #contiene-contacto {
+    background-color: #5a0413;
+    color: whitesmoke;
+  }
+}
+@media screen and (max-width: 720px) {
+  #contiene-contacto {
+    background-color: whitesmoke;
+    color: #5a0413;
+  }
+}
+
+#contacto {
+  text-align: center;
+}
+
+#mail {
+  text-align: center;
+}
+
+#info-extra {
+  color: #5a0413;
+}
+
+.menu-container {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  justify-content: start;
+  background-color: #5a0413;
+  top: 0%;
+}
+.menu-container .menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 480px) {
+  #palabra-definida {
+    color: #5a0413;
+    background-color: whitesmoke;
+    font-family: "Bebas Neue";
+    position: relative;
+    text-align: center;
+    width: auto;
+  }
+}
+@media screen and (max-width: 720px) {
+  #palabra-definida {
+    color: whitesmoke;
+    background-color: #5a0413;
+    font-family: "Bebas Neue";
+    position: relative;
+    text-align: center;
+    width: auto;
+  }
+}
+
+#container-uno {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#container-dos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.full-video {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: top;
+}
+
+#video-arriba {
+  margin-bottom: 200px;
+  width: 100%;
+  height: auto;
+}
+
+.elipse {
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  z-index: 5;
+  margin: -50px auto;
+  width: 50px;
+  height: 125px;
+  border-radius: 50%;
+  background: #2b2b2b;
+  -moz-transform: scaleY(0.4);
+  -webkit-transform: scaleY(0.4);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.elipse p {
+  height: 10px;
+  color: whitesmoke;
+}
+.elipse:checked {
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  z-index: 10px;
+  margin: -80px auto;
+  width: 50px;
+  height: 125px;
+  border-radius: 50%;
+  background: #cecece;
+  -moz-transform: scaleY(0.4);
+  -webkit-transform: scaleY(0.4);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.contiene-adver {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advertencia {
+  height: 200px;
+  width: 400px;
+  background-color: red;
+  color: whitesmoke;
+  border-radius: 30px 30px 30px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.advertencia p {
+  font-size: 20px;
+  text-decoration: bold;
+  text-align: center;
+  font-weight: bold;
+}
+
+.email {
+  margin-top: 50px;
+}
+.dato {
+  transition: all 500ms;
+  background-color: #fff;
+  color: #5a0413;
+}
+.dato:hover {
+  background-color: #2b2b2b;
+  color: whitesmoke;
+}
+
+.red {
+  width: 200px;
+  height: 200px;
+  background-color: none;
+  border-radius: none;
+  filter: none;
+  transition: all 500ms;
+}
+.red:hover {
+  background-color: whitesmoke;
+  filter: invert(100%);
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

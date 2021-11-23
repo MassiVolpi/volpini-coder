@@ -1,0 +1,18 @@
+footer{
+    transition: all 200ms;
+
+    &:hover{
+        background-color: nth($colores,1);
+        color: nth($colores,3);
+        justify-content: center;    
+    }
+    @media screen and (max-width: 480px){
+        background-color: nth($colores,3);
+        color: nth($colores,1);
+    }
+    @media screen and (max-width: 720px){
+        background-color: nth($colores,1);
+        color: nth($colores,3);
+    }
+}
+
