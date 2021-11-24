@@ -205,13 +205,14 @@ video {
     width: 50px; 
     height: 125px;
     border-radius: 50%;
-    background: #2b2b2b;
+    background: #dd0c0c;
     -moz-transform: scaleY(0.4);
     -webkit-transform: scaleY(0.4);
     box-shadow: 0px 1px 2px rgba(0, 0, 0,0.25);
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: ;
     p{
        height: 10px;
        color: nth($colores, 3); 
@@ -298,4 +299,17 @@ video {
         filter: invert(100%);
         border-radius: 20px;
     }
+}
+
+#contiene-precios{
+    width: 1200px;
+    height: 2400px;
+    margin-top: 100px;
+    justify-content: center;
+    background-color: #2b2b2b;
+    .cartes-precios{
+        width: 300px;
+        height: 150px;
+        background-color: #2b2b2b;
+      }
 }
